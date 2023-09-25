@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <!-- Huvudavsnitt som innehåller metadata för dokumentet -->
+        <meta charset="UTF-8"> <!-- Anger teckenuppsättning som utf-8, vilket stöder många internationella tecken -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gör sidan responsiv på olika enheter -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/881e111c11.js" crossorigin="anonymous"></script> <!--Detta är en länk till en sida som hjälper mig att få icons i min footer-->
+        <link rel="stylesheet" href="style.css"> <!--Länk till css-->
+        <title>Contact</title> 
+    </head>
+<body>
+    <!--Här är min navigationsmeny-->
+    <nav> 
+      <input type="checkbox" id="check">
+      <label for="check">
+          <i class="fas fa-bars" id="btn"></i>
+          <i class="fas fa-times" id="cancel"></i>
+      </label>
+          
+      <ul> <!--Här är mina länkar till de andra sidorna, detta är även min navigationsmeny -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+  </nav>
+  <!--Slut på navigationsmenyn-->
+
+  <!--Här börjar mitt innehåll-->
+  <div class="container"> <!-- Huvudcontainer som håller sidomenyn och huvudinnehållet -->
+    <div class="main-content1"> <!-- Startar huvudinnehållet -->
+        <!-- Nedan följer tre exempel på kort inom huvudinnehållet -->
+
+        <div class="card1-about">
+            <img src="pics/test.png" alt="Mig"> <!--Infogar min bild-->
+        </div> 
+
+        <div class="card3">
+            <h1>Ida Casperson</h1> <!--Sekundära rubrik-->
+            <h3>Contact me here:</h3> <!--Detta är en ännu mindre rubrik-->
+            <p>Mail: ida_casperson@hotmail.com</p>
+            <p>Tel nr: 070.....</p>
+            <a class="social-icon" href="http://www.linkedin.com/in/ida-casperson-9600881b2" target="_blank"><i class="fa-brands fa-linkedin" style="color: #000000;"></i></a>
+            <a class="social-icons" href="https://github.com/iiddaa96" target="_blank"><i class="fa-brands fa-github" style="color: #010409;"></i></a>  
+        </div> 
+       
+    </div> <!-- Avslutar huvudinnehållet -->
+</div> <!-- Avslutar huvudcontainer -->
+
+<!--I min footer har jag lagt till tre icons som länkar till mina kontakt sidor. Var av dom har en class "icon"-->
+<footer>
+    <small> @Copywrite Ida Casperson|2023 </small>
+    <a class="icon" href="http://www.linkedin.com/in/ida-casperson-9600881b2" target="_blank"><i class="fa-brands fa-linkedin" style="color: #000000;"></i></a>
+    <a class="icon" href="https://github.com/iiddaa96" target="_blank"><i class="fa-brands fa-github" style="color: #010409;"></i></a>
+    <a class="icon" href="https://outlook.office365.com/mail/" target="_blank"><i class="fa-solid fa-envelope" style="color: #030507;"></i></a>
+</footer>
+  
+</body>
+</html>

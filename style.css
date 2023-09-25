@@ -1,0 +1,628 @@
+/*Sätter standard för body, lägger även in en bild som bakgrund istället för färg */
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-image: url("pics/grön.webp"); /* Bakgrundsbild istället för färg */
+  background-size: cover; /* Använder detta för att säkerställa att bilden täcker hela bakgrunden */
+  background-repeat: no-repeat; /* Förhindra att bilden upprepas */
+  background-attachment: fixed;
+  background-position: center; /* Här gör jag att bakgrundsbilden blir i mitten oavsett strl */
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Här nedan är min style för navigationsmenyn */
+nav {
+  height: 80px;
+  background-color: white;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: black;
+  font-size: 18px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+nav ul li a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
+  z-index: 10;
+}
+
+nav ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+
+}
+
+label #btn,
+label #cancel {
+  color: black;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/* Huvudinnehållet börjar här */
+/* Här börjar redigering av mina divar, i denna diven sätter jag standarden */
+.container {
+  display: flex; /* Aktiverar Flexbox på container-elementet */
+  width: 100%;
+}
+
+/* Stil för huvudinnehållet */
+.main-content1 {
+  padding: 20px;
+  display: flex;
+  width: 100%;
+}
+
+/* i portfolio.html fortsätter jag med flexbox */
+.main-content2 {
+  width: 100%;
+}
+
+/* Här fixar jag mina cards utom bilden */
+.card1,
+.card2,
+.card3,
+.card4 {
+  border-radius: 5px; /* Rundar kanterna på kortet */
+  overflow: hidden; /* Förhindrar att innehåll går utanför kortets kanter */
+}
+
+/* Redigerar bilden */
+.card1 {
+  display: block;
+  width: 40%;
+  /*border: 4px solid black;*/
+  border-radius: 900px;
+}
+
+.card1 img {
+  margin-top: 60px;
+  padding-left: 40px;
+  width: 80%;
+  object-fit: contain;
+  border-radius: 3em; /* Gör rundade kanter på bilden */
+  animation: slideRight 1s ease forwards; /* Med hjälp av keyframe så gör jag att bilden glider in från vänster */
+  animation-delay: 0.3s;
+}
+
+.card1-about {
+  display: block;
+  width: 40%;
+}
+
+.card1-about img {
+  margin-top: 60px;
+  padding-left: 40px;
+  width: 80%;
+  object-fit: contain;
+  border-radius: 3em; /* Gör rundade kanter på bilden */
+  animation: slideRight 1s ease forwards; /* Med hjälp av keyframe så gör jag att bilden glider in från vänster */
+  animation-delay: 0.3s;
+}
+
+/*Keyframe för min bild */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* Stylar index.html */
+.card5 h1 {
+  padding-right: 55px;
+  margin-top: 90px;
+  font-size: 130px; /* Hur stor texten ska vara */
+  font-weight: lighter; /* Gör texten smal */
+}
+
+.card5 h2 {
+  font-size: 40px; /* Hur stor texten ska vara */
+  font-weight: lighter; /* Gör texten smal */
+}
+
+/* Stylar i about.html här nedan */
+.card2 {
+  width: 60%;
+  padding-left: 15px;
+  margin-left: 60px;
+}
+
+.card2 h1 {
+  margin-top: 80px;
+  font-size: 120px; /* Hur stor texten ska vara */
+  font-weight: lighter; /* Gör texten smal */
+}
+
+.card2 h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.card2 p {
+  margin-top: 12px;
+  padding: 5px; /* Inre marginal runt texten inuti kortet */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  text-align: left;
+}
+
+/* Stylar i contact.html */
+.card3 h1 {
+  margin-left: 60px;
+  margin-top: 80px;
+  font-size: 120px; /* Hur stor texten ska vara */
+  font-weight: lighter; /* Gör texten smal */
+}
+
+.card3 h3 {
+  margin-left: 70px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.card3 p {
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 70px;
+  margin-bottom: 3px;
+  margin-top: 7px;
+  font-size: 20px;
+}
+
+
+/* CSS för länkarna i contact.html*/
+.social-icons {
+  font-size: 70px;
+}
+
+.social-icon {
+  margin-left: 80px;
+  margin-right: 10px;
+  font-size: 66px;
+  transform: .1.5s; /* Gör lite animation till icon i contact.html */
+}
+
+.social-icon :hover, .social-icons :hover {
+  cursor: pointer; /* Ändra pekaren till en hand när du hovrar över knappen */
+  transform: scale(1.3); /* Gör lite animation till icon i contact.html */
+}
+
+/* Här stylar jag portfolio.html */
+.card4 h2 {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 90px; /* Hur stor texten ska vara */
+  font-weight: lighter; /* Gör texten smal */
+  text-align: center;
+}
+
+.card4 h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 33px;
+  margin-left: 20px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.card4 p {
+  margin-top: 10px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+/* Knappar i portfolio.html */
+.portfolio-button {
+  color: black; /* Textfärg */
+  font-size: 12px; /* Textstorlek */
+  font-weight: lighter; /* Lätt textstil */
+  padding: 10px 20px; /* Inre marginal (topp och botten, höger och vänster) */
+  border: solid black; /* Lägger till kantlinje samt färg */
+  border-radius: 5px; /* Avrundade kanter */
+  cursor: pointer; /* Ändra pekaren till en hand när du hovrar över knappen */
+  transition: background-color 0.3s ease; /* Smidig övergång av bakgrundsfärgen */
+  margin-left: 44%; /* Flyttar knappen till höger, gör luft från vänster */
+  margin-bottom: 1em; /* Gör mellanrum, mellan knapparna/länkarna */
+  font-family: "Times New Roman", Times, serif;
+}
+
+.portfolio-button:hover, 
+.portfolio-button:focus{
+  background-color: #D0E7D2; /*Blir en grön färg när man hovrar*/
+}
+
+.portfolio-button:active{
+  background-color: #79AC78; /*Blir en starkare färg när man klickar*/
+}
+
+/* Här är min tidslinje som ligger i portfolio.html */
+.timeline {
+  position: relative;
+  max-width: 1300px;
+  margin: 100px auto;
+}
+
+.container-timeline {
+  padding: 20px 30px;
+  position: relative;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+
+
+/*Använder keyframes för slide in min bild från vänster*/
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.container:nth-child(1) {
+  animation-delay: 0s;
+}
+.container:nth-child(2) {
+  animation-delay: 1s;
+}
+.container:nth-child(3) {
+  animation-delay: 2s;
+}
+.container:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.text-box {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  font-family: "Times New Roman", Times, serif;
+}
+.left-container {
+  left: 0;
+}
+
+.right-container {
+  left: 50%;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.text-box h2 {
+  font-weight: 600;
+}
+
+.text-box h3 {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+/*Slut på tidslinjen */
+
+/* Stylar min footer */
+footer {
+  text-align: center;
+  background-color: #D0E7D2;
+  margin: 0;
+  width: 100%; 
+  position: fixed; /*Sitter fast nedan på sidan, men hänger med i skrollning*/
+  bottom: 0;
+}
+
+/* Fixar iconen i footer */
+.icon {
+  padding-left: 6px;
+  padding-right: 6px;
+  text-align: center;
+  margin: 0;
+  transform: .1.5s;
+}
+
+.icon :hover {
+  cursor: pointer; /* Ändra pekaren till en hand när du hovrar över knappen */
+  transform: scale(1.2); /* Storlek på hur det ser ut när man hovrar över iconen i footern */
+}
+
+
+/* Gör för olika enheter här nedan */
+@media (max-width: 994px) {
+  nav ul li a {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 860px) {
+  label > #btn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: lightgreen;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  #check:checked ~ label #btn {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel {
+    display: block;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .main-content1 { /*Flexbox här nedan*/
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card1 {
+    width: 80%;
+  }
+
+  .card5 h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 80px;
+    text-align: center;
+  }
+
+  .card5 h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .card2 {
+    padding: 0;
+    margin-left: -7em;
+  }
+
+  .card2 h1 {
+    font-size: 60px;
+  }
+
+  .card2 h2 {
+    font-size: 25px;
+  }
+
+  .card1-about {
+    display: none;
+  }
+
+  .card3 h1 {
+    font-size: 75px;
+  }
+
+  .portfolio-button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8px;
+  }
+
+  .timeline {
+    margin: 50px auto;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .container-timeline {
+    width: 97%;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  .text-box {
+    font-size: 13px;
+  }
+  .text-box small {
+    margin-bottom: 10px;
+  }
+  .right-container {
+    left: 0;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .container {
+    display: grid; /*Byter från flexbox till grid på nedanstående layout*/
+  }
+
+  .main-content1 {
+    display: grid; /*Byter från flexbox till grid på nedanstående layout*/
+    grid-template-rows: 15% 1fr;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .card1 {
+    grid-row: 1;
+    padding-left: 70px;
+    width: 45%;
+  }
+
+  .card1 img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 10em;
+  }
+
+  .card5 {
+    grid-row: 2;
+    width: fit-content;
+    height: 75vh;
+  }
+
+  .card5 h1 {
+    margin-top: 70px;
+    font-size: 60px; /* Hur stor texten ska vara */
+    font-weight: lighter; /* Gör texten smal */
+    margin: 3px;
+  }
+
+  .card5 h2 {
+    font-size: 20px; /* Hur stor texten ska vara */
+    font-weight: lighter; /* Gör texten smal */
+  }
+
+  .card2 {
+    grid-row: 2;
+    width: fit-content;
+    margin: 0;
+  }
+
+  .card2 h1 {
+    font-size: 60px; /* Hur stor texten ska vara */
+    font-weight: lighter; /* Gör texten smal */
+    margin-top: 20px;
+  }
+
+  .card2 h2 {
+    font-size: 25px; /* Hur stor texten ska vara */
+    font-weight: lighter; /* Gör texten smal */
+  }
+
+  .card2 p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13px;
+    overflow-wrap: break-word;
+  }
+
+  .card3 {
+    grid-row: 1 / 3; /*Fixar till layouten med grid*/
+    width: fit-content;
+    height: 500px;
+  }
+
+  .card1-about {
+    display: none;
+  }
+
+  .card3 h1 {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+
+  .card3 h3 {
+    font-size: 20px;
+  }
+
+  .card3 p {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .social-icon {
+    padding-left: 2px; /*Justerar mellanrum */
+    padding-right: 2px;
+  }
+
+  .card4 h2 {
+    font-size: 50px; /* Hur stor texten ska vara */
+    font-weight: lighter; /* Gör texten smal */
+    text-align: center;
+  }
+
+  .card4 h3 {
+    font-size: 25px; /* Hur stor texten ska vara */
+    font-weight: lighter; /* Gör texten smal */
+    text-align: center;
+  }
+
+  .card4 p {
+    font-size: 15px; /* Hur stor texten ska vara */
+    text-align: center;
+  }
+
+  .card4 .portfolio-button {
+    justify-content: left;
+  }
+
+  .text-box {
+    width: 83%;
+  }
+}

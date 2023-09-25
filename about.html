@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/881e111c11.js" crossorigin="anonymous"></script> <!--Detta är en länk till en sida som hjälper mig att få icons i min footer-->
+    <script type="text/javascript" src="style.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>About</title>
+</head>
+<body>
+
+  <!--Här är min navigationsmeny-->
+  <nav> 
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+        
+    <ul> <!--Här är mina länkar till de andra sidorna, detta är även min navigationsmeny -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+</nav>
+<!--Slut på navigationsmenyn-->
+
+
+<!--Här börjar mitt innehåll-->
+<div class="container"> <!-- Huvudcontainer som håller sidomenyn och huvudinnehållet -->
+    <div class="main-content1"> <!-- Startar huvudinnehållet -->
+        
+        <div class="card1">
+            <img src="pics/test.png" alt="Mig">  <!--Infogar min bild-->
+        </div>
+
+        <div class="card2">
+            <h1>Ida Casperson</h1> <!--Min huvud rubrik-->
+            <h2>FRONTEND DEVELOPER JUNIOR STUDENT</h2> <!--Sekundära rubrik-->
+            <!--Här nedan är brödtexten-->
+            <p>Hi, my name is Ida Casperson, and I am 27 years old. I live in Mölndal which is located just next to Gothenburg. 
+                I am a person who enjoys spending time with friends and family in my free time and whenever possible I like to engage in CrossFit training. 
+                Sailing along the west coast during the summers is a significant passion of mine. Traveling or going on a spontaneous road trip is also something I never say no to. </p> 
+            <p>I am currently in my first year of studying Frontend Development at the Media Institute in Gothenburg. 
+                At the same time I work weekend shifts at Volvo Cars in Torslanda, where I ensure that the cars being built are watertight and soundproof. I prepare the car bodies for various chemical baths before they move on to the assembly factory. 
+                I have been in Volvo Cars for almost 7 years now and have been fortunate to work in various roles primarily within logistics. In recent years I have been in the paint shop but now I feel the need to continue my development, 
+                which led me to choose the Frontend Developer program. </p>
+            <p> At the moment I am in the process of learning <b>HTML</b> and <b>CSS</b>, and very soon, I will be diving into <b>JAVASCRIPT</b> as well. </p>
+        </div> 
+       
+    </div> <!-- Avslutar huvudinnehållet -->
+</div> <!-- Avslutar huvudcontainer -->
+
+<!--I min footer har jag lagt till tre icons som länkar till mina kontakt sidor. Var av dom har en class "icon"-->
+<footer>
+    <small> @Copywrite Ida Casperson|2023 </small>
+    <a class="icon" href="http://www.linkedin.com/in/ida-casperson-9600881b2" target="_blank"><i class="fa-brands fa-linkedin" style="color: #000000;"></i></a>
+    <a class="icon" href="https://github.com/iiddaa96" target="_blank"><i class="fa-brands fa-github" style="color: #010409;"></i></a>
+    <a class="icon" href="https://outlook.office365.com/mail/" target="_blank"><i class="fa-solid fa-envelope" style="color: #030507;"></i></a>
+</footer>
+
+</body>
+</html>
